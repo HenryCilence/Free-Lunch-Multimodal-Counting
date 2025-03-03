@@ -105,8 +105,6 @@ class RegTrainer(Trainer):
                 mae_is_best, mse_is_best = self.val_epoch()
             if epoch >= args.val_start and (mse_is_best or mae_is_best):  # or (epoch > 200 and epoch % 5 == 0)):
                 self.test_epoch()
-            # if epoch >= args.val_start:
-            #     self.test_epoch()
 
     def train_eopch(self):
         epoch_ot_loss = AverageMeter()
