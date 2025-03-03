@@ -15,7 +15,7 @@ from typing import Optional
 from models.distillation.unet_cross_att import U_Net
 import logging
 
-moco_cl_path = r""
+net_ppca_path = r""
 bm_path = r""
 
 
@@ -700,7 +700,7 @@ class Swin_BM_RGBT(nn.Module):
             # 初始化
             # MoCo Init
             logging.info("Backbone Init:")
-            backbone_weight = OrderedDict(list(torch.load(moco_cl_path)['model_state_dict'].items())[2:185])
+            backbone_weight = OrderedDict(list(torch.load(net_ppca_path)['model_state_dict'].items())[2:185])
             backbone_weight = OrderedDict((key.replace('moco.encoder_q.', ''), value) for key, value in backbone_weight.items())
             logging.info(self.backbone.load_state_dict(backbone_weight))
 
