@@ -15,3 +15,5 @@ Containing:
   - Broker Modality Generator (BMG) weight on RGBT-CC (needs loading in /Fine-tune/models/counting/swin_unet.py);
   - Model weight after fine-tuning on RGBT-CC;
   - Model weight after fine-tuning on DroneRGBT.
+ 
+Note: Unlike BM, no special processing of .npy files is needed.
