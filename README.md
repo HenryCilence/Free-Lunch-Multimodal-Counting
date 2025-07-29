@@ -17,3 +17,7 @@ Containing:
   - Model weight after fine-tuning on DroneRGBT.
  
 Note: Unlike BM, no special processing of .npy files is needed.
+
+Update on 29 July, 2025:
+Alternative link: 
+https://drive.google.com/drive/folders/1AsNWyzaWvofa9mTXF26Duk8pz8v5bcvM?usp=sharing
