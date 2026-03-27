@@ -703,11 +703,6 @@ class Swin_BM_RGBT(nn.Module):
             backbone_weight = OrderedDict(list(torch.load(net_ppca_path)['model_state_dict'].items())[2:185])
             backbone_weight = OrderedDict((key.replace('moco.encoder_q.', ''), value) for key, value in backbone_weight.items())
             logging.info(self.backbone.load_state_dict(backbone_weight))
-
-            logging.info("Reg Layer Init:")
-            reg_weight = OrderedDict(list(torch.load(bm_path).items())[-6:])
-            reg_weight = OrderedDict((key.replace('reg.', ''), value) for key, value in reg_weight.items())
-            logging.info(self.reg_layer.load_state_dict(reg_weight))
             
             logging.info("U-Net Init:")
             unet_weight = OrderedDict(list(torch.load(bm_path).items())[40:102])
