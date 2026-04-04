@@ -11,6 +11,7 @@ https://pan.baidu.com/s/1kUAzN8nz5qa_4PPFYuu5hA?pwd=pvjb
 Containing:
 - Density maps after fine-tuning on RGBT-CC;
 - Weight files:
+  - Pretrained weight of Swin-Tiny (needs loading in PPCA/models/swin.py)
   - Backbone weight after PPCA on RGBT-CC (needs loading in /Fine-tune/models/counting/swin_unet.py);
   - Broker Modality Generator (BMG) weight on RGBT-CC (needs loading in /Fine-tune/models/counting/swin_unet.py);
   - Model weight after fine-tuning on RGBT-CC;
